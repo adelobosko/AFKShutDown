@@ -31,8 +31,8 @@ namespace ShutDown
             var rnd1 = new Random();
             switch (Light)
             {
-                case true: { int rnd = rnd1.Next(4, 9); brightness = (float)brightness * rnd; break; }
-                case false: { int rnd = rnd1.Next(1, 3); brightness = (float)-brightness * rnd; break; }
+                case true: { var rnd = rnd1.Next(4, 9); brightness = brightness * rnd; break; }
+                case false: { var rnd = rnd1.Next(1, 3); brightness = -brightness * rnd; break; }
             }
             float[][] colorMatrixElements = {
                                                 new float[] {1, 0, 0, 0, 0},
